@@ -1,12 +1,20 @@
 [tool.poetry]
 name = "litepy"
 version = "0.1.0"
-description = "A Python API wrapper for Litecoin0"
+description = "An asynchronous API wrapper for Litecoin"
 authors = ["hularuns <159131400+hularuns@users.noreply.github.com>"]
 readme = "README.md"
+packages = [
+    { include = "litepy" },
+    { include = "tests" }     
+]
+
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.12"
+aiohttp = "^3.11.13"
+asyncio = "^3.4.3"
+pytest = "^8.3.5"
 
 
 [build-system]

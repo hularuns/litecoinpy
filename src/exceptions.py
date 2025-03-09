@@ -1,0 +1,2 @@
+class LitePyConnectionError(Exception):
+    pass
