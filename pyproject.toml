@@ -1,12 +1,14 @@
 [tool.poetry]
-name = "litepy"
+name = "litecoinpy"
 version = "0.1.0"
 description = "An asynchronous API wrapper for Litecoin"
-authors = ["hularuns <159131400+hularuns@users.noreply.github.com>"]
+authors = [
+  { name="Sam", email="hularuns@gmail.com" },
+]
 readme = "README.md"
 
 packages = [
-    { include = "litepy", from = "src" },
+    { include = "litecoinpy", from = "src" },
     { include = "tests" }
 ]
 
@@ -21,3 +23,7 @@ pytest = "^8.3.5"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+Homepage = "https://github.com/hularuns/litecoinpy"
+Issues = "https://github.com/hularuns/litecoinpy"

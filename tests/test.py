@@ -1,12 +1,12 @@
 import pytest
 
-from src.litepy import LitePy
+from src.litecoinpy import litecoinpy
 from unittest.mock import patch, AsyncMock
 import aiohttp
 
 @pytest.mark.asyncio
 async def test_get_address():
-    ltc = LitePy()
+    ltc = litecoinpy()
     ltc_address = "LbPQBNUPSDJvoD6aw7pSEiSs6R2VjMVeNX"
     response = await ltc.get_address(ltc_address)   
     assert response, "Response is empty"

@@ -1,5 +1,5 @@
-class LitePyConnectionError(Exception):
+class litecoinpyConnectionError(Exception):
     pass
 
-class LitePyInvalidRateLimit(Exception):
+class litecoinpyInvalidRateLimit(Exception):
     pass

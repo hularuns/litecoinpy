@@ -1,11 +1,11 @@
 import aiohttp
 import asyncio
 from typing import List, Dict, Any
-from src.exceptions import LitePyConnectionError, LitePyInvalidRateLimit
+from src.exceptions import litecoinpyConnectionError, litecoinpyInvalidRateLimit
 from src.utils import get_logger
 import time
 
-class LitePy:
+class litecoinpy:
     def __init__(self):
         self.logger = get_logger(__name__)
         self.base_url = "https://litecoinspace.org/api/"
@@ -66,19 +66,19 @@ class LitePy:
                             return await self.get_address(ltc_address, self.request_interval)
                         else:
                             self.logger.error(f"Max retries reached: {self.current_retry}")
-                            raise LitePyInvalidRateLimit("Max retries reached")
+                            raise litecoinpyInvalidRateLimit("Max retries reached")
                     
                     if response.status != 200:
                         self.logger.error(f"Error getting address: {response.status}")
-                        raise LitePyConnectionError("Error getting address")
+                        raise litecoinpyConnectionError("Error getting address")
                     return await response.json()
                 
         except aiohttp.ClientError as e:
-            raise LitePyConnectionError("Error getting address")
+            raise litecoinpyConnectionError("Error getting address")
 
 
 if __name__ == "__main__":
-    ltc = LitePy()
+    ltc = litecoinpy()
     ltc_address = "qwdqd"
     for i in range(2):
         print(asyncio.run(ltc.get_address(ltc_address)))
