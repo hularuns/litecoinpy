@@ -4,9 +4,10 @@ version = "0.1.0"
 description = "An asynchronous API wrapper for Litecoin"
 authors = ["hularuns <159131400+hularuns@users.noreply.github.com>"]
 readme = "README.md"
+
 packages = [
-    { include = "litepy" },
-    { include = "tests" }     
+    { include = "litepy", from = "src" },
+    { include = "tests" }
 ]
 
 
