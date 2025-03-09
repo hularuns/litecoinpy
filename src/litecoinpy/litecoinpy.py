@@ -1,8 +1,8 @@
 import aiohttp
 import asyncio
 from typing import List, Dict, Any
-from src.exceptions import litecoinpyConnectionError, litecoinpyInvalidRateLimit
-from src.utils import get_logger
+from src.litecoinpy.exceptions import litecoinpyConnectionError, litecoinpyInvalidRateLimit
+from src.litecoinpy.utils import get_logger
 import time
 
 class litecoinpy:
