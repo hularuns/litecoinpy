@@ -2,9 +2,7 @@
 name = "litecoinpy"
 version = "0.1.0"
 description = "An asynchronous API wrapper for Litecoin"
-authors = [
-  { name="Sam", email="hularuns@gmail.com" },
-]
+authors = ["hularuns <159131400+hularuns@users.noreply.github.com>"]
 readme = "README.md"
 
 packages = [
